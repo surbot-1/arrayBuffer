@@ -34,21 +34,21 @@ document.getElementById("div1").appendChild(myImage);
   function button1() {
   
   const d1, d2, d3 ;
-    /*
+    
   const file = document.getElementById("file").files[0] ;
   const reader = new FileReader();
       reader.onload = function(evt) {
-      var buffer = evt.target.result ; d1 = evt.target.result ;
+      var buffer = evt.target.result ; // d1 = evt.target.result ;
      // var buffer = new arrayBuffer(512);
-      var view = new Int8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
+      var view = new Int8Array(buffer) ;  // d2 = new Uint8ClampedArray(d1);
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += view ;
       };
   reader.readAsArrayBuffer(file);
-    */
+    /*
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const arr = new Uint8ClampedArray[40000];
+const arr = new Uint8ClampedArray(40000);
 
 // Iterate through every pixel
 for (let i = 0; i < arr.length; i += 4) {
@@ -65,7 +65,7 @@ for (let i = 0; i < arr.length; i += 4) {
 // Draw image data to the canvas
 ctx.putImageData(imageData, 20, 20);
 // ctx.putImageData(imgData, 20, 20);
-  
+  */
 }
 
   
