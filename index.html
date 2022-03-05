@@ -48,7 +48,7 @@ document.getElementById("div1").appendChild(myImage);
       var view = new Int8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += view ;
-      document.getElementById("div2").innerHTML += d2 ;
+      document.getElementById("div2").innerHTML += "br" + d2 ;
       };
   reader.readAsArrayBuffer(file);
     
