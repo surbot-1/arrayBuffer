@@ -13,8 +13,10 @@
 <input type="file" name="file" id="file">
 <input type="text" placeholder="Text" id="textField">
 <button onclick = "abc()"> Button </button>
+<button onclick = "abc2()"> Button </button>
 <!-- <img id="image2" src="apple-icon.png"> -->
 <canvas id="canvas"></canvas>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
 <div id="div1"> </div>
 <div id="div2"> </div>
 <div id="div3"> </div>
@@ -68,8 +70,29 @@ for (let i = 0; i < arr.length; i += 4) {
   
 }
 
+</script>
+  
+<script>
+  
+function abc2() {
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+  var imageData = ctx.createImageData(100, 100);
+  var i;
+  for ( i = 0; i < imageData.data.length; i += 4) {
+      imageData.data[i + 0] = 255;    // R value
+      imageData.data[i + 1] = 0;  // G value
+      imageData.data[i + 2] = 0;    // B value
+      imageData.data[i + 3] = 255;  // A value
+      
+     ctx.putImageData(imageData, 10, 10);
+     document.getElementById("div2").innerHTML += imageData.data ;
+     }
+  }
   
 </script>
+  
+  
   
 <script>
 
