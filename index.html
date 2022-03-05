@@ -16,7 +16,8 @@
 <button onclick = "abc2()"> Button </button>
 <button onclick="copy()">Copy</button>
 <!-- <img id="image2" src="apple-icon.png"> -->
-<canvas id="canvas"></canvas>
+<canvas id="canvas1"></canvas>
+<canvas id="canvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
 <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
 <div id="div1"> </div>
 <div id="div2"> </div>
@@ -34,9 +35,10 @@ document.getElementById("div1").appendChild(myImage);
   
 <script>
   alert('2');
+  var d1, d2, d3;
   function abc() {
   
- var d1, d2, d3 ;
+ 
     
   var file = document.getElementById("file").files[0] ;
   var reader = new FileReader();
