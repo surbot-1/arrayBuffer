@@ -45,9 +45,10 @@ document.getElementById("div1").appendChild(myImage);
       reader.onload = function(evt) {
       var buffer = evt.target.result ;  d1 = evt.target.result ;
      // var buffer = new arrayBuffer(512);
-      var view = new Int8Array(buffer) ;   d2 = new Int8Array(d1);
+      var view = new Int8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += view ;
+      document.getElementById("div2").innerHTML += d2 ;
       };
   reader.readAsArrayBuffer(file);
     
@@ -65,11 +66,11 @@ for (let i = 0; i < arr.length; i += 4) {
 
 // Initialize a new ImageData object
  // let imageData = new ImageData(arr, 200);
- var imgData = new ImageData(d2, 200) 
+ var imgData = new ImageData(d2, 100, 100) 
     
 // Draw image data to the canvas
 // ctx.putImageData(imageData, 20, 20);
- ctx.putImageData(imgData, 20, 20);
+ ctx.putImageData(imgData, 10, 10);
   
 } 
 
