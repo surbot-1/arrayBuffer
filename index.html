@@ -40,7 +40,7 @@ document.getElementById("div1").appendChild(myImage);
       reader.onload = function(evt) {
       var buffer = evt.target.result ; d1 = evt.target.result ;
      // var buffer = new arrayBuffer(512);
-      var view = Int8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
+      var view = Int8Array(buffer) ;   d2 =  Uint8ClampedArray(d1);
      // document.getElimentById("div2").innerHTML += evt.target.result ;
       document.getElimentById("div2").innerHTML += view ;
       };
