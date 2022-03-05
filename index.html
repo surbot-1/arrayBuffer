@@ -33,10 +33,10 @@ document.getElementById("div1").appendChild(myImage);
   alert('2');
   function abc() {
   
-  const d1, d2, d3 ;
+ var d1, d2, d3 ;
     
-  const file = document.getElementById("file").files[0] ;
-  const reader = new FileReader();
+  var file = document.getElementById("file").files[0] ;
+  var reader = new FileReader();
       reader.onload = function(evt) {
       var buffer = evt.target.result ; // d1 = evt.target.result ;
      // var buffer = new arrayBuffer(512);
