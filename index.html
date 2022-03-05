@@ -31,6 +31,44 @@ document.getElementById("div1").appendChild(myImage);
   
 <script>
   
+  function button() {
+  
+  const d1, d2, d3 ;
+    
+  const file = document.getElimentById("file").files[0] ;
+  const reader = new FileReader();
+      reader.onload = function(evt) {
+      var buffer = evt.target.result ; d1 = evt.target.result ;
+     // var buffer = new arrayBuffer(512);
+      var view = Int8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
+     // document.getElimentById("div2").innerHTML += evt.target.result ;
+      document.getElimentById("div2").innerHTML += view ;
+      };
+  reader.readAsText(file);
+    
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const arr = new Uint8ClampedArray(40000);
+
+// Iterate through every pixel
+for (let i = 0; i < arr.length; i += 4) {
+  arr[i + 0] = 0;    // R value
+  arr[i + 1] = 190;  // G value
+  arr[i + 2] = 0;    // B value
+  arr[i + 3] = 255;  // A value
+}
+
+// Initialize a new ImageData object
+ let imageData = new ImageData(arr, 200);
+ var imgData = new ImageData(d2, 200) 
+    
+// Draw image data to the canvas
+ctx.putImageData(imageData, 20, 20);
+// ctx.putImageData(imgData, 20, 20);
+  
+}
+
+  
 </script>
   
 <script>
