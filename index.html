@@ -45,7 +45,7 @@ document.getElementById("div1").appendChild(myImage);
       reader.onload = function(evt) {
       var buffer = evt.target.result ;  d1 = evt.target.result ;
      // var buffer = new arrayBuffer(512);
-      var view = new Int8Array(buffer) ;   d2 = new Uint8Array(d1);
+      var view = new Int8Array(buffer) ;   d2 = new Int8Array(d1);
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += view ;
       };
@@ -79,7 +79,7 @@ for (let i = 0; i < arr.length; i += 4) {
   alert('3');
 function abc2() {
   var canvas = document.getElementById('myCanvas');
-  var ctx = canvas.getContext('2d');
+  var ctx = canvas.getContext('2d'); d3 = ctx;
   var imageData = ctx.createImageData(100, 100);
   var i;
   for ( i = 0; i < imageData.data.length; i += 4) {
