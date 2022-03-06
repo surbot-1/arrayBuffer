@@ -145,10 +145,17 @@ function abc2() {
             var canvas = document.getElementById('canvas1');
             var ctx = canvas.getContext('2d'); 
              
-             var imgData3 = ctx.getImageData(10, 10, 32, 32);
-             ctx.putImageData(imgData3, , 110, 10);
-           //  document.getElementById("div2").innerHTML += "<br>" + imgData3.data ;
-             
+                  var img3 = new Image();
+                  img3.src = 'apple-icon-32.png';
+                  img3.onload = function (e)
+                      {
+                      context1.drawImage(img3, 110, 10, 32, 32);
+                      
+                      var imgData3 = ctx.getImageData(10, 10, 32, 32);
+                      ctx.putImageData(imgData3, , 210, 10);
+                      document.getElementById("div2").innerHTML += "<br>" + imgData3.data ;
+                      }
+                    
             var imageData = ctx.createImageData(32, 32); 
             var i;
             for ( i = 0; i < 32*4*32; i += 4) {
@@ -157,7 +164,7 @@ function abc2() {
                 imageData.data[i + 2] = data[i + 35] ;  // 0;    // B value
                 imageData.data[i + 3] = data[i + 36] ;  //  255;  // A value
                 }
-            ctx.putImageData(imageData, 210, 10);
+            ctx.putImageData(imageData, 310, 10);
             document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
      
        };
