@@ -142,7 +142,7 @@ function abc2() {
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += "<br>" + view ;
      // document.getElementById("div2").innerHTML += "<br>" + d2 ;
-      for (let i=0; i<32*4*32; i++) {
+      for (let i=0; i<256; i++) {
            document.getElementById("div3").innerHTML += "<br>" + i + " " + view[i] ;
            }
      // };
@@ -168,7 +168,7 @@ function abc2() {
                 imageData.data[i + 0] = data[i + data[12]] ;  // 255;    // R value
                 imageData.data[i + 1] = data[i + data[11]] ;  // 0;  // G value
                 imageData.data[i + 2] = data[i + data[10]] ;  // 0;    // B value
-                imageData.data[i + 3] = 0 ;  //  255;  // A value
+                imageData.data[i + 3] = data[i + data[13]] ;  //  255;  // A value
                 }
             ctx.putImageData(imageData, 310, 10);
             document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
@@ -216,7 +216,7 @@ function abc2() {
                        var view41 = new Uint8Array(e.target.result);  var data = new Uint8ClampedArray(e.target.result);
                        document.getElementById("div2").innerHTML += "<br>" + view41 ;
                        for (let i=0; i<32*4*32; i++) {
-                         document.getElementById("div3").innerHTML += "<br>" + i + " " + view41[i] ;
+                         document.getElementById("div3").innerHTML += " " + i + ": " + view41[i] ;
                        }
                      // };
                       // reader41.readAsArrayBuffer(file41);
