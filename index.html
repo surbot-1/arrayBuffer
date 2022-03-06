@@ -144,7 +144,7 @@ function abc2() {
   
             var canvas = document.getElementById('canvas1');
             var ctx = canvas.getContext('2d'); 
-            var imageData = ctx.createImageData(48, 48); 
+            var imageData = ctx.createImageData(48, 48*4); 
             var i;
             for ( i = 0; i < imageData.data.length; i += 4) {
                 imageData.data[i + 0] = data[i + 33] ;  // 255;    // R value
