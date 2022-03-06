@@ -24,7 +24,9 @@
 <div id="div1"> </div>
 <div id="div2"> </div>
 <div id="div3"> </div>
-  
+  <div id="div4"> </div>
+  <div id="div5"> </div>
+  <div id="div6"> </div>
   
 
 <script>
@@ -140,6 +142,9 @@ function abc2() {
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += "<br>" + view ;
      // document.getElementById("div2").innerHTML += "<br>" + d2 ;
+      for (let i=0; i<128; i++) {
+           document.getElementById("div3").innerHTML += "<br>" + i + " " + view[i] ;
+           }
      // };
  // reader.readAsArrayBuffer(file);
   
