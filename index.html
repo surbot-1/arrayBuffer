@@ -186,12 +186,12 @@ function abc2() {
             var ctx4 = cvs4.getContext('2d'); 
              
                   var img4 = new Image();
-                  img4.src = 'Msn-icon.png';
+                  img4.src = 'Turbo-Snail-icon.png';
                   img4.onload = function (e4)
                       {
                       ctx4.drawImage(img4, 110, 10, 32, 32);
                       
-                      var imgData4 = ctx4.getImageData(10, 10, 32, 32);
+                      var imgData4 = ctx4.getImageData(110, 10, 32, 32);
                       ctx4.putImageData(imgData4, 210, 10);
                       document.getElementById("div2").innerHTML += "<br>" + imgData4.data ;
                       };
