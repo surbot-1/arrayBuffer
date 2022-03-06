@@ -210,6 +210,7 @@ function abc2() {
                        };
                        reader4.readAsDataURL(file4);
                     
+                    var file41 = document.getElementById("file").files[0] ;
                     var reader41 = new FileReader();
                        reader41.onload = function(e) {
                        var view41 = new Uint8Array(e.target.result);
@@ -218,7 +219,7 @@ function abc2() {
                          document.getElementById("div2").innerHTML += "<br>" + i + " " + view41[i] ;
                        }
                       };
-                       reader4.readAsArrayBuffer(file4);
+                       reader41.readAsArrayBuffer(file41);
                    // };
             }
        
