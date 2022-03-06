@@ -201,7 +201,7 @@ function abc2() {
                       document.getElementById("div2").innerHTML += "<br>" + img4.naturalWidth +" "+ img4.naturalHeight +" "+ img4.sizes ;
                       document.getElementById("div2").innerHTML += "<br>" + imgData4.data ;
                       document.getElementById("div2").innerHTML += "<br>" + dataURL ;
-                      // };
+                       };
                    
                    var file4 = document.getElementById("file").files[0] ;
                    var reader4 = new FileReader();
@@ -209,7 +209,17 @@ function abc2() {
                        document.getElementById("div2").innerHTML += "<br>" + e.target.result ;
                        };
                        reader4.readAsDataURL(file4);
-                    };
+                    
+                    var reader41 = new FileReader();
+                       reader41.onload = function(e) {
+                       var view41 = new Uint8Array(e.target.result);
+                       document.getElementById("div2").innerHTML += "<br>" + view41 ;
+                       for (let i=0; i<128; i++) {
+                         document.getElementById("div2").innerHTML += "<br>" + i + " " + view41[i] ;
+                       }
+                      };
+                       reader4.readAsArrayBuffer(file4);
+                   // };
             }
        
   </script>
