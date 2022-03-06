@@ -185,7 +185,7 @@ function abc2() {
   
 <script>
   
-            alert('91');
+            alert('9');
      function abc4() {
             var cvs4 = document.getElementById('canvas1');
             var ctx4 = cvs4.getContext('2d'); 
@@ -226,10 +226,10 @@ function abc2() {
                       for ( i = 32*4*32-32; i>0; i -= 32*4 ) { j=0;
                           for ( j = 0; j < 32*4; j += 4) {
                             for ( k = 0; k < 32*4*32; k +=4) {
-                            imageData4.data[k + 0] = data4[i+j + data4[12]] ;  // 255;    // R value
-                            imageData4.data[k + 1] = data4[i+j + data4[11]] ;  // 0;  // G value
-                            imageData4.data[k + 2] = data4[i+j + data4[10]] ;  // 0;    // B value
-                            imageData4.data[k + 3] = data4[i+j + data4[13]] ;  //  255;  // A value
+                            imageData4.data[k + 0] = 255;// data4[i+j + data4[12]] ;  // 255;    // R value
+                            imageData4.data[k + 1] = 0; // data4[i+j + data4[11]] ;  // 0;  // G value
+                            imageData4.data[k + 2] = 0; // data4[i+j + data4[10]] ;  // 0;    // B value
+                            imageData4.data[k + 3] = 255; // data4[i+j + data4[13]] ;  //  255;  // A value
                             }
                           }
                        }
