@@ -26,7 +26,7 @@
   
 
 <script>
-  alert('2');
+  alert('1');
 var myImage = new Image();
 myImage.src = 'canvas_moon.png';
 document.getElementById("div1").appendChild(myImage);
@@ -44,7 +44,7 @@ document.getElementById("div1").appendChild(myImage);
        var reader1 = new FileReader();
        reader1.onload = function (evt) {
        var view1 = new Uint8Array(evt.target.result) ;
-       document.getElementById("div2").innerHTML += view1 ;
+       document.getElementById("div2").innerHTML += "<br>"+view1 ;
         }
         reader1.raedasArrayBuffer(img1);
   }
@@ -64,7 +64,7 @@ document.getElementById("div1").appendChild(myImage);
      // var buffer = new arrayBuffer(512);
       var view = new Uint8Array(buffer) ;   d2 = new Uint8ClampedArray(d1);
      // document.getElementById("div2").innerHTML += evt.target.result ;
-      document.getElementById("div2").innerHTML += view ;
+      document.getElementById("div2").innerHTML += "<br>" + view ;
       document.getElementById("div2").innerHTML += "<br>" + d2 ;
       };
   reader.readAsArrayBuffer(file);
@@ -107,7 +107,7 @@ function abc2() {
       imageData.data[i + 3] = 255;  // A value
       }
      ctx.putImageData(imageData, 10, 10);
-     document.getElementById("div2").innerHTML += imageData.data ;
+     document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
      
   }
   
