@@ -17,7 +17,7 @@
 <button onclick="copy()">Copy</button>
 <!-- <img id="image2" src="apple-icon.png"> -->
 <canvas id="canvas1"></canvas>
-<canvas id="canvas" width="800" height="800" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="canvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
 <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
 <div id="div1"> </div>
 <div id="div2"> </div>
@@ -26,7 +26,7 @@
   
 
 <script>
-  alert('1');
+  alert('3');
 var myImage = new Image();
 myImage.src = 'canvas_moon.png';
 document.getElementById("div1").appendChild(myImage);
@@ -34,7 +34,7 @@ document.getElementById("div1").appendChild(myImage);
 </script>
   
 <script>
-  alert('2');
+  alert('4');
   var d1, d2, d3, d4, d5, d6;
   function abc() {
   
@@ -52,7 +52,7 @@ document.getElementById("div1").appendChild(myImage);
       };
   reader.readAsArrayBuffer(file);
     
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const arr = new Uint8ClampedArray(40000);
 
@@ -77,7 +77,7 @@ for (let i = 0; i < arr.length; i += 4) {
 </script>
   
 <script>
-  alert('3');
+  alert('5');
 function abc2() {
   var canvas = document.getElementById('myCanvas');
   var ctx = canvas.getContext('2d'); d3 = ctx;
