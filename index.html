@@ -16,8 +16,8 @@
 <button onclick = "abc2()"> Button </button>
 <button onclick="copy()">Copy</button>
 <!-- <img id="image2" src="apple-icon.png"> -->
-<canvas id="canvas1"></canvas>
-<canvas id="canvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="canvas"></canvas>
+<canvas id="canvas1" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
 <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
 <div id="div1"> </div>
 <div id="div2"> </div>
@@ -52,7 +52,7 @@ document.getElementById("div1").appendChild(myImage);
       };
   reader.readAsArrayBuffer(file);
     
-const canvas = document.getElementById('canvas1');
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const arr = new Uint8ClampedArray(40000);
 
@@ -66,7 +66,7 @@ for (let i = 0; i < arr.length; i += 4) {
 
 // Initialize a new ImageData object
   let imageData = new ImageData(arr, 200);
-// var imgData = new ImageData(d2, 200) 
+// var imageData = new ImageData(arr, 50,50) 
     
 // Draw image data to the canvas
  ctx.putImageData(imageData, 20, 20);
