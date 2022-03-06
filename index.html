@@ -14,6 +14,7 @@
 <input type="text" placeholder="Text" id="textField">
 <button onclick = "abc()"> Button </button>
 <button onclick = "abc2()"> Button </button>
+<button onclick = "abc3()"> Button </button>
 <button onclick="copy()">Copy</button>
 <!-- <img id="image2" src="apple-icon.png"> -->
 <canvas id="canvas"></canvas>
@@ -45,7 +46,7 @@ document.getElementById("div1").appendChild(myImage);
        reader1.onload = function (evt) {
        var view1 = new Uint8Array(evt.target.result) ;
        document.getElementById("div2").innerHTML += "<br>"+view1 ;
-        }
+        } ;
         reader1.raedasArrayBuffer(img1);
   }
 </script>
@@ -124,8 +125,38 @@ function abc2() {
   
 <script>
 
+  alert('8');
+  function abc3() {
   
+ 
+  var data;
+  var file = document.getElementById("file").files[0] ;
+  var reader = new FileReader();
+      reader.onload = function(evt) {
+      var buffer = evt.target.result ;     data = new Uint8Array (evt.target.result) ;
+     // var buffer = new arrayBuffer(512);
+      var view = new Uint8Array(buffer) ;   
+     // document.getElementById("div2").innerHTML += evt.target.result ;
+      document.getElementById("div2").innerHTML += "<br>" + view ;
+     // document.getElementById("div2").innerHTML += "<br>" + d2 ;
+      };
+  reader.readAsArrayBuffer(file);
+  
+  var canvas = document.getElementById('canvas1');
+  var ctx = canvas.getContext('2d'); 
+  var imageData = ctx.createImageData(128, 128); 
+  var i;
+  for ( i = 0; i < imageData.data.length; i += 4) {
+      imageData.data[i + 0] = data[i + 33] // 255;    // R value
+      imageData.data[i + 1] = data[i + 34] // 0;  // G value
+      imageData.data[i + 2] = data[i + 35]  // 0;    // B value
+      imageData.data[i + 3] = data[i + 36]   255;  // A value
+      }
+     ctx.putImageData(imageData, 10, 10);
+     document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
+     
 
+ }
 
 </script>
 
