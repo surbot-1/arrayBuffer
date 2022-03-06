@@ -215,8 +215,8 @@ function abc2() {
                        reader41.onload = function(e) {
                        var view41 = new Uint8Array(e.target.result);  var data = new Uint8ClampedArray(e.target.result);
                        document.getElementById("div2").innerHTML += "<br>" + view41 ;
-                       for (let i=0; i<32*4*32; i++) {
-                         document.getElementById("div3").innerHTML += ", " + i + ": " + view41[i] ;
+                       for (let i=0; i<256; i++) {
+                         document.getElementById("div3").innerHTML += "<br>" + i + ": " + view41[i] ;
                        }
                      // };
                       // reader41.readAsArrayBuffer(file41);
