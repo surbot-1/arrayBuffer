@@ -142,7 +142,7 @@ function abc2() {
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += "<br>" + view ;
      // document.getElementById("div2").innerHTML += "<br>" + d2 ;
-      for (let i=0; i<128; i++) {
+      for (let i=0; i<32*4*32; i++) {
            document.getElementById("div3").innerHTML += "<br>" + i + " " + view[i] ;
            }
      // };
@@ -215,7 +215,7 @@ function abc2() {
                        reader41.onload = function(e) {
                        var view41 = new Uint8Array(e.target.result);  var data = new Uint8ClampedArray(e.target.result);
                        document.getElementById("div2").innerHTML += "<br>" + view41 ;
-                       for (let i=0; i<256; i++) {
+                       for (let i=0; i<32*4*32; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + " " + view41[i] ;
                        }
                      // };
