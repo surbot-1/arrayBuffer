@@ -145,16 +145,16 @@ function abc2() {
             var canvas = document.getElementById('canvas1');
             var ctx = canvas.getContext('2d'); 
              
-                  var img3 = new Image();
+                 /* var img3 = new Image();
                   img3.src = 'apple-icon-32.png';
                   img3.onload = function (e)
                       {
-                      context1.drawImage(img3, 110, 10, 32, 32);
+                      ctx.drawImage(img3, 110, 10, 32, 32);
                       
                       var imgData3 = ctx.getImageData(10, 10, 32, 32);
                       ctx.putImageData(imgData3, , 210, 10);
                       document.getElementById("div2").innerHTML += "<br>" + imgData3.data ;
-                      }
+                      }  */
                     
             var imageData = ctx.createImageData(32, 32); 
             var i;
@@ -169,8 +169,22 @@ function abc2() {
      
        };
       reader.readAsArrayBuffer(file);
+    
+            var cvs3 = document.getElementById('canvas1');
+            var ctx3 = cvs3.getContext('2d'); 
+             
+                  var img3 = new Image();
+                  img3.src = 'apple-icon-32.png';
+                  img3.onload = function (e)
+                      {
+                      ctx3.drawImage(img3, 110, 10, 32, 32);
+                      
+                      var imgData3 = ctx.getImageData(10, 10, 32, 32);
+                      ctx.putImageData(imgData3, , 210, 10);
+                      document.getElementById("div2").innerHTML += "<br>" + imgData3.data ;
+                      }  
         
- }
+    }
 
 </script>
 
