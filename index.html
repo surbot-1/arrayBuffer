@@ -139,23 +139,25 @@ function abc2() {
      // document.getElementById("div2").innerHTML += evt.target.result ;
       document.getElementById("div2").innerHTML += "<br>" + view ;
      // document.getElementById("div2").innerHTML += "<br>" + d2 ;
-      };
-  reader.readAsArrayBuffer(file);
+     // };
+ // reader.readAsArrayBuffer(file);
   
-  var canvas = document.getElementById('canvas1');
-  var ctx = canvas.getContext('2d'); 
-  var imageData = ctx.createImageData(48, 48); 
-  var i;
-  for ( i = 0; i < imageData.data.length; i += 4) {
-      imageData.data[i + 0] = data[i + 33]  // 255;    // R value
-      imageData.data[i + 1] = data[i + 34]  // 0;  // G value
-      imageData.data[i + 2] = data[i + 35]  // 0;    // B value
-      imageData.data[i + 3] = data[i + 36]  //  255;  // A value
-      }
-     ctx.putImageData(imageData, 200, 10);
-     document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
+            var canvas = document.getElementById('canvas1');
+            var ctx = canvas.getContext('2d'); 
+            var imageData = ctx.createImageData(48, 48); 
+            var i;
+            for ( i = 0; i < imageData.data.length; i += 4) {
+                imageData.data[i + 0] = data[i + 33]  // 255;    // R value
+                imageData.data[i + 1] = data[i + 34]  // 0;  // G value
+                imageData.data[i + 2] = data[i + 35]  // 0;    // B value
+                imageData.data[i + 3] = data[i + 36]  //  255;  // A value
+                }
+            ctx.putImageData(imageData, 200, 10);
+            document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
      
-
+       };
+      reader.readAsArrayBuffer(file);
+        
  }
 
 </script>
