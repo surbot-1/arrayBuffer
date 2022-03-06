@@ -125,7 +125,7 @@ function abc2() {
   
 <script>
 
-  alert('8');
+  alert('6');
   function abc3() {
   
  
@@ -144,6 +144,11 @@ function abc2() {
   
             var canvas = document.getElementById('canvas1');
             var ctx = canvas.getContext('2d'); 
+        
+             var imgData = ctx.getImageData(10, 10, 32, 32);
+             ctx.putImageData(imgData, , 110, 10);
+             document.getElementById("div2").innerHTML += "<br>" + imgData.data ;
+        
             var imageData = ctx.createImageData(32, 32); 
             var i;
             for ( i = 0; i < 32*4*32; i += 4) {
@@ -152,7 +157,7 @@ function abc2() {
                 imageData.data[i + 2] = data[i + 35] ;  // 0;    // B value
                 imageData.data[i + 3] = data[i + 36] ;  //  255;  // A value
                 }
-            ctx.putImageData(imageData, 200, 10);
+            ctx.putImageData(imageData, 210, 10);
             document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
      
        };
