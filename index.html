@@ -213,7 +213,7 @@ function abc2() {
                     var file41 = document.getElementById("file").files[0] ;
                     var reader41 = new FileReader();
                        reader41.onload = function(e42) {
-                       var view41 = new Uint8Array(e42.target.result);  var data4 = new Uint8ClampedArray(e42.target.result);
+                       var view41 = new Uint8Array(e42.target.result);  var data4 = new Uint8Array(e42.target.result);
                        document.getElementById("div2").innerHTML += "<br>" + view41 ;
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view41[i] ;
@@ -223,13 +223,13 @@ function abc2() {
        
                       var imageData4 = ctx4.createImageData(32, 32); 
                          var i, j, k;
-                      for ( i = 32*4*32-32; i>0; i -= 32*4 ) { j=0;
+                      for ( i = 32*4*32-32; i>0; i = i-32*4 ) { j=0;
                           for ( j = 0; j < 32*4; j += 4) {
                             for ( k = 0; k < 32*4*32; k +=4) {
-                            imageData4.data[k + 0] = 255;// data4[i+j + data4[12]] ;  // 255;    // R value
-                            imageData4.data[k + 1] = 0; // data4[i+j + data4[11]] ;  // 0;  // G value
-                            imageData4.data[k + 2] = 0; // data4[i+j + data4[10]] ;  // 0;    // B value
-                            imageData4.data[k + 3] = 255; // data4[i+j + data4[13]] ;  //  255;  // A value
+                            imageData4.data[k + 0] = data4[i+j + data4[12]] ;  // 255;    // R value
+                            imageData4.data[k + 1] = data4[i+j + data4[11]] ;  // 0;  // G value
+                            imageData4.data[k + 2] = data4[i+j + data4[10]] ;  // 0;    // B value
+                            imageData4.data[k + 3] = data4[i+j + data4[13]] ;  //  255;  // A value
                             }
                           }
                        }
