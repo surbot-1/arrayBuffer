@@ -165,9 +165,9 @@ function abc2() {
             var imageData = ctx.createImageData(32, 32); 
             var i;
             for ( i = 0; i < 32*4*32; i += 4) {
-                imageData.data[i + 0] = data[i + data[10]] ;  // 255;    // R value
+                imageData.data[i + 0] = data[i + data[12]] ;  // 255;    // R value
                 imageData.data[i + 1] = data[i + data[11]] ;  // 0;  // G value
-                imageData.data[i + 2] = data[i + data[12]] ;  // 0;    // B value
+                imageData.data[i + 2] = data[i + data[10]] ;  // 0;    // B value
                 imageData.data[i + 3] = data[i + data[13]] ;  //  255;  // A value
                 }
             ctx.putImageData(imageData, 310, 10);
@@ -225,9 +225,9 @@ function abc2() {
                       for ( let i = (32*4*32)-32; i>0; i -=(32*4) ) { 
                           for ( let j = 0; j < 32*4; j += 4) {
                             for ( let k = 0; k < 32*4*32; k +=4) {
-                            imageData.data[k + 0] = data[i+j + data[10]] ;  // 255;    // R value
+                            imageData.data[k + 0] = data[i+j + data[12]] ;  // 255;    // R value
                             imageData.data[k + 1] = data[i+j + data[11]] ;  // 0;  // G value
-                            imageData.data[k + 2] = data[i+j + data[12]] ;  // 0;    // B value
+                            imageData.data[k + 2] = data[i+j + data[10]] ;  // 0;    // B value
                             imageData.data[k + 3] = data[i+j + data[13]] ;  //  255;  // A value
                             }
                           }
