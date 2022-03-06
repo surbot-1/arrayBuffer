@@ -168,7 +168,7 @@ function abc2() {
                 imageData.data[i + 0] = data[i + data[12]] ;  // 255;    // R value
                 imageData.data[i + 1] = data[i + data[11]] ;  // 0;  // G value
                 imageData.data[i + 2] = data[i + data[10]] ;  // 0;    // B value
-                imageData.data[i + 3] = data[i + 255 ] ;  //  255;  // A value
+                imageData.data[i + 3] = 255 ;  //  255;  // A value
                 }
             ctx.putImageData(imageData, 310, 10);
             document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
@@ -185,7 +185,7 @@ function abc2() {
   
 <script>
   
-            alert('90');
+            alert('91');
      function abc4() {
             var cvs4 = document.getElementById('canvas1');
             var ctx4 = cvs4.getContext('2d'); 
