@@ -213,7 +213,7 @@ function abc2() {
                     var file41 = document.getElementById("file").files[0] ;
                     var reader41 = new FileReader();
                        reader41.onload = function(e42) {
-                       var view41 = new Uint8Array(e42.target.result);  var data4 = new Uint8Array(e42.target.result);
+                       var view41 = new Uint8Array(e42.target.result);  var dataBuf4 = e42.target.result; var data4 = new Uint8Array(dataBuf4);
                        document.getElementById("div2").innerHTML += "<br>" + view41 ;
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view41[i] ;
