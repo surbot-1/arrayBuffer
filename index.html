@@ -258,7 +258,9 @@ function abc2() {
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view[i] ;
                        } 
+                   
                       var sb = data[2]; // size
+                      var bgn = data[10]; // start of data byte
                       var sd = data[14]; // size
                       var w = data[18];
                       var h = data[22];
@@ -271,10 +273,10 @@ function abc2() {
                       for ( i = w*b*h-w*b; i>0; i -=w*b ) {
                           for ( j = 0; j < w*b; j += b) {
                             
-                            imageData.data[k + 0] = data[i+j + data[10]+2] ;  // 255;    // R value
-                            imageData.data[k + 1] = data[i+j + data[10]+1] ;  // 0;  // G value
-                            imageData.data[k + 2] = data[i+j + data[10]] ;  // 0;    // B value
-                            imageData.data[k + 3] = data[i+j + data[10]+3] ;  //  255;  // A value
+                            imageData.data[k + 0] = data[bgn+2+i+j];  // 255;    // R value
+                            imageData.data[k + 1] = data[bgn+1+i+j]  // 0;  // G value
+                            imageData.data[k + 2] = data[bgn+0+i+j] ;  // 0;    // B value
+                            imageData.data[k + 3] = data[bgn+3+i+j] ;  //  255;  // A value
                             k += b;
                            }
                          }
