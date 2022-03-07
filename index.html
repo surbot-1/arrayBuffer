@@ -245,7 +245,7 @@ function abc2() {
   
   
         <script>
-              alert('51');
+              alert('52');
             function abc5() {
                 var file = document.getElementById("file").files[0] ;
                 var reader = new FileReader();
@@ -280,7 +280,7 @@ function abc2() {
                      
                       if (b==3) {
                       var  i, j, k=0;
-                      for ( i = w*b*h-w*3; i>0; i -=w*b ) {
+                      for ( i = w*b*h-w*b; i>0; i -=w*b ) {
                           for ( j = 0; j < w*b; j += b ) {
                             
                             imageData.data[k + 0] = data[bgn+2+i+j];  // 255;    // R value
