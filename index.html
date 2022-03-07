@@ -258,19 +258,24 @@ function abc2() {
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view[i] ;
                        } 
-                     
+                      var sb = data[2]; // size
+                      var sd = data[14]; // size
+                      var w = data[18];
+                      var h = data[22];
+                      var bpp = data[28]; var b = (data[28])/8;
+                   
                       var cvs = document.getElementById("canvas1");
                       var ctx = cvs.getContext("2d"); 
-                      var imageData = ctx.createImageData(32, 32); 
+                      var imageData = ctx.createImageData(w, h); 
                       var i, j, k=0;
-                      for ( i = 32*4*32-32*4; i>0; i -=32*4 ) {
-                          for ( j = 0; j < 32*4; j += 4) {
+                      for ( i = w*b*h-w*b; i>0; i -=w*b ) {
+                          for ( j = 0; j < w*b; j += b) {
                             
                             imageData.data[k + 0] = data[i+j + data[10]+2] ;  // 255;    // R value
                             imageData.data[k + 1] = data[i+j + data[10]+1] ;  // 0;  // G value
                             imageData.data[k + 2] = data[i+j + data[10]] ;  // 0;    // B value
                             imageData.data[k + 3] = data[i+j + data[10]+3] ;  //  255;  // A value
-                            k += 4;
+                            k += b;
                            }
                          }
                          ctx.putImageData(imageData, 310, 10);
