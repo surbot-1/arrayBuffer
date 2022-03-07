@@ -245,7 +245,7 @@ function abc2() {
   
   
         <script>
-              alert('52');
+              alert('53');
             function abc5() {
                 var file = document.getElementById("file").files[0] ;
                 var reader = new FileReader();
@@ -272,14 +272,14 @@ function abc2() {
                      
                       if (b==3) {
                       var  i, j, k=0;
-                      for ( i = w*(b+1)*h-w*(b+1); i>0; i -=w*(b+1) ) {
-                          for ( j = 0; j < w*(b+1); j += (b+1) ) {
+                      for ( i = w*4*h-w*4; i>0; i -=w*4 ) {
+                          for ( j = 0; j < w*4; j += 4 ) {
                             
                             imageData.data[i+j + 0] = data[bgn+2+k];  // 255;    // R value
                             imageData.data[i+j + 1] = data[bgn+1+k]  // 0;  // G value
                             imageData.data[i+j + 2] = data[bgn+0+k] ;  // 0;    // B value
                             imageData.data[i+j + 3] = 255; // data[bgn+3+i+j] ;  //  255;  // A value
-                            k += b;
+                            k += 3;
                            }
                           }
                         }
