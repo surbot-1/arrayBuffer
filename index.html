@@ -261,9 +261,9 @@ function abc2() {
                    
                       var sb = data[2]; // size
                       var bgn = data[10]; // start of data byte
-                      var sd = data[14]; // size
-                      var w = data[18];
-                      var h = data[22];
+                      var sd = 256*data[15] + data[14]; // size
+                      var w = 256*data[19] + data[18];
+                      var h = 256*data[23] + data[22];
                       var bpp = data[28]; var b = (data[28])/8;
                    
                       var cvs = document.getElementById("canvas1");
