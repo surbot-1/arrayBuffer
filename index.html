@@ -245,7 +245,7 @@ function abc2() {
   
   
         <script>
-              alert('52');
+              alert('51');
             function abc5() {
                 var file = document.getElementById("file").files[0] ;
                 var reader = new FileReader();
@@ -258,15 +258,19 @@ function abc2() {
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view[i] ;
                        } 
-                      var buffer1 = new ArrayBuffer(8);
-                      var view1 = new DataView(buffer1);
+                      var bufferI = new ArrayBuffer(4);
+                      var viewI = new DataView(bufferI);
                       
                       var sb = data[2]; // size
                       var bgn = data[10]; // start of data byte
                       var sd = 256*(data[15]) + (data[14]); // size
-                      view1.setInt8(0, data[19]);  // var w = new Uint8Array(dataBuf, 18, 4) // var w = 256*(data[19]) + (data[18]);
-                      view1.setInt8(1, data[18]);
-                      var w = view1.getInt16(0);
+                      viewI.setInt8(0, data[19]);
+                      viewI.setInt8(1, data[18]);
+                      var w = viewI.getInt16(0);
+                      // var w 
+                      viewI.setInt8(0, data[23]);  
+                      viewI.setInt8(1, data[22]);
+                      var h = viewI.getInt16(0);
                       // var h = 256*(data[23]) + (data[22]);
                       var bpp = data[28]; var b = (data[28])/8;
                    
