@@ -165,10 +165,10 @@ function abc2() {
             var imageData = ctx.createImageData(32, 32); 
             var i;
             for ( i = 0; i < 32*4*32; i += 4) {
-                imageData.data[i + 0] = data[i + data[12]] ;  // 255;    // R value
-                imageData.data[i + 1] = data[i + data[11]] ;  // 0;  // G value
+                imageData.data[i + 0] = data[i + data[10]+2] ;  // 255;    // R value
+                imageData.data[i + 1] = data[i + data[10]+1] ;  // 0;  // G value
                 imageData.data[i + 2] = data[i + data[10]] ;  // 0;    // B value
-                imageData.data[i + 3] = data[i + data[13]] ;  //  255;  // A value
+                imageData.data[i + 3] = data[i + data[10]+3] ;  //  255;  // A value
                 }
             ctx.putImageData(imageData, 310, 10);
             document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
@@ -226,10 +226,10 @@ function abc2() {
                       for ( i = 32*4*32-32; i>0; i -=32*4 ) { j=0;
                           for ( j = 0; j < 32*4; j += 4) {
                             for ( k = 0; k < 32*4*32; k +=4) {
-                            imageData4.data[k + 0] = data4[i+j + data4[12]] ;  // 255;    // R value
-                            imageData4.data[k + 1] = data4[i+j + data4[11]] ;  // 0;  // G value
+                            imageData4.data[k + 0] = data4[i+j + data4[10]+2] ;  // 255;    // R value
+                            imageData4.data[k + 1] = data4[i+j + data4[10]+1] ;  // 0;  // G value
                             imageData4.data[k + 2] = data4[i+j + data4[10]] ;  // 0;    // B value
-                            imageData4.data[k + 3] = data4[i+j + data4[13]] ;  //  255;  // A value
+                            imageData4.data[k + 3] = data4[i+j + data4[10]+3] ;  //  255;  // A value
                             }
                           }
                        }
