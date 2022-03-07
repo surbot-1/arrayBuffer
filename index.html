@@ -254,10 +254,10 @@ function abc2() {
                         var data = new Uint8Array(dataBuf);
                         var buffer = e.target.result;
                         var view = new Uint8Array(buffer); 
-                       document.getElementById("div2").innerHTML += "<br>" + view ;
+                      /* document.getElementById("div2").innerHTML += "<br>" + view ;
                        for (let i=0; i<256; i++) {
                          document.getElementById("div3").innerHTML += "<br>" + i + ": " + view[i] ;
-                       }
+                       } */
                      
                       var cvs = document.getElementById("canvas1");
                       var ctx = cvs.getContext("2d"); 
@@ -274,7 +274,7 @@ function abc2() {
                            } j=0;
                          }
                          ctx.putImageData(imageData, 310, 10);
-                   
+                         document.getElementById("div2").innerHTML += "<br>" + imageData.data ;
                     };
                    reader.readAsArrayBuffer(file);
             }
