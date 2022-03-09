@@ -447,6 +447,15 @@ function abc2() {
   
        <script>
   
+         var x = document.createElement("INPUT");
+         x.setAttribute("type", "text");
+         x.setAttribute("value", "Hello World!");
+         x.setAttribute("id", "cinField");
+         document.body.appendChild(x);
+         var y =  document.getElementById("cinField").value;
+         document.getElementById("div1").innerHTML += "<br>" + y ;
+         
+         
        </script>
 
        <script>
