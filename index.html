@@ -460,6 +460,7 @@ function abc2() {
        </script>
 
        <script>
+         alert('8');
        
         var str = 'Hello World';
         document.getElementById("div2").innerHTML += "<br>" + str[0] ;
@@ -472,6 +473,9 @@ function abc2() {
          
         document.getElementById("div2").innerHTML += "<br>" + str1 + " " + buf1 ;
         document.getElementById("div2").innerHTML += "<br>" + str2 + " " + buf2 ;
+         
+        var view3 = new Uint8Array(buf2);
+        document.getElementById("div2").innerHTML += "<br>" + view3 ;
          
        </script>
 
