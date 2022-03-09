@@ -464,6 +464,15 @@ function abc2() {
         var str = 'Hello World';
         document.getElementById("div2").innerHTML += "<br>" + str[0] ;
          
+        var str1 = 'Hello, Word' ;
+        var buf1 = Buffer.from(str1, 'utf8');
+
+        var str2 = buf1.toString();
+        var buf2 = Buffer.from(str2, 'utf8');
+         
+        document.getElementById("div2").innerHTML += "<br>" + str1 + " " + buf1 ;
+        document.getElementById("div2").innerHTML += "<br>" + str2 + " " + buf2 ;
+         
        </script>
 
        <script>
