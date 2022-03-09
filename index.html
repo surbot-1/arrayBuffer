@@ -468,11 +468,11 @@ function abc2() {
         var str1 = 'Hello, Word' ;
         var buf1 = Buffer.from(str1, 'utf-8');
 
-        var str2 = buf1.toString();
-        var buf2 = Buffer.from(str2, 'utf-8');
+       // var str2 = buf1.toString();
+       // var buf2 = Buffer.from(str2, 'utf-8');
          
         document.getElementById("div2").innerHTML += "<br>" + str1 + " " + buf1 ;
-        document.getElementById("div2").innerHTML += "<br>" + str2 + " " + buf2 ;
+       // document.getElementById("div2").innerHTML += "<br>" + str2 + " " + buf2 ;
          
         //var view3 = new Uint8Array(buf2);
         // document.getElementById("div2").innerHTML += "<br>" + view3 ;
