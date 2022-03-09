@@ -450,10 +450,11 @@ function abc2() {
          var x = document.createElement("INPUT");
          x.setAttribute("type", "text");
          x.setAttribute("value", "Hello World!");
+         x.setAttribute("placeholder", "Text");
          x.setAttribute("id", "cinField");
-         document.body.appendChild(x);
+         document.getElementById("div2").appendChild(x);
          var y =  document.getElementById("cinField").value;
-         document.getElementById("div1").innerHTML += "<br>" + y ;
+         document.getElementById("div2").innerHTML += "<br>" + y ;
          
          
        </script>
